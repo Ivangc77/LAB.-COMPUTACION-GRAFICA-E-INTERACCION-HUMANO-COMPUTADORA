@@ -7,6 +7,11 @@ out vec3 ourColor;
 uniform mat4 model;
 uniform mat4 view;
 uniform mat4 projection;
+<<<<<<< Updated upstream
+=======
+uniform mat4 transform;
+
+>>>>>>> Stashed changes
 
 void main()
 {

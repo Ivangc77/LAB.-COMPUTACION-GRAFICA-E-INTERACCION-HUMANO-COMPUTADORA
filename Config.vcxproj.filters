@@ -26,7 +26,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <ClCompile Include="Main_P3.cpp">
+=======
+    <ClCompile Include="Main_Modelado.cpp">
+>>>>>>> Stashed changes
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
