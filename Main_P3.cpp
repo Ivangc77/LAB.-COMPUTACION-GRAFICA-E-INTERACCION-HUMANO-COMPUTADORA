@@ -117,7 +117,7 @@ int main() {
 	//	-0.5f * 500,  0.5f * 500,  0.5f * 500, 1.0f, 0.2f,0.5f,
 	//	-0.5f * 500,  0.5f * 500, -0.5f * 500, 1.0f, 0.2f,0.5f,
 	//};
-	//
+	
 
 	 //use with Perspective Projection
 	float vertices[] = {
@@ -221,7 +221,7 @@ int main() {
 	    view = glm::translate(view, glm::vec3(0.0f,0.0f,-5.0f));
 		model = glm::rotate( model, 0.5f, glm::vec3( 1.0f, 1.0f, 0.0f ) ); // use to compare orthographic and perspective projection
 		model = glm::scale(model, glm::vec3(1.0f, 0.5f, 3.0f));
-		//view = glm::translate( view, glm::vec3( screenWidth / 2, screenHeight / 2, 0.0f ) ); // use with orthographic projection
+		//view = glm::translate( view, glm::vec3( screenWidth / 2, screenHeight / 2,0.0f ) ); // use with orthographic projection
 		
 		GLint modelLoc = glGetUniformLocation(ourShader.Program, "model");
 		GLint viewLoc = glGetUniformLocation(ourShader.Program, "view");
@@ -236,25 +236,23 @@ int main() {
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 
-		////----------------------------------
+		//----------------------------------
 		model = glm::mat4(1);
-
 		model = glm::translate(model, glm::vec3(3.0f, 1.0f, -3.0f));
+		
 		model = glm::rotate(model, 0.5f, glm::vec3(-3.0f, 0.0f, -1.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 2.0f, 0.5f));
-
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 
 		glDrawArrays(GL_TRIANGLES, 0, 36);
-		////----------------------------------
+		//----------------------------------
 
-		////----------------------------------
+		//----------------------------------
 		model = glm::mat4(1);
-
 		model = glm::translate(model, glm::vec3(-1.5f, -1.0f, 1.0f));
+
 		model = glm::rotate(model, 0.5f, glm::vec3(5.0f, 0.1f, 3.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
-
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 
 		glDrawArrays(GL_TRIANGLES, 0, 36);
